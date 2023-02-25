@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-white: #FFFFFF;
+  --clr-black: #202020;
+  --clr-grey: #707070;
+  --clr-blue: #6C63FF;
+  --clr-blue-2: #4c46b6;
+  --clr-green: #4fb646;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ------------------------------------------------------ */
+/* -- NAVIGATION -- */
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+
+.nav__brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+}
+
+.nav__brand img {
+  max-width: 125px;
+  height: auto;
+}
+
+.nav__brand h1 {
+  color: var(--clr-blue);
+  font-size: 2.5em;
+  font-weight: 800;
+}
+
+.nav__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  list-style: none;
+}
+
+.nav__links li {
+  margin: 0 15px;
+}
+
+.nav__links li a {
+  text-decoration: none;
+  color: var(--clr-black);
+}
+
+.nav__links li a:hover {
+  color: var(--clr-blue);
+}
+
+.nav__connect {
+  width: 175px;
+  height: 50px;
+  margin: 0 auto;
+
+  background-color: var(--clr-blue);
+  color: var(--clr-white);
+
+  border: none;
+  border-radius: 4px;
+
+  font-family: "Open Sans";
+  font-size: 1.10em;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 250ms ease;
+}
+
+.nav__connect:hover {
+  background-color: var(--clr-blue-2);
+}
+
+/* ------------------------------------------------------ */
+/* -- HEADER -- */
+
+header {
+  background-image: url("./assets/painting2.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height: 40vh;
+
+  position: relative;
+}
+
+.header__title {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: var(--clr-white);
+  font-size: 2em;
+
+  width: 100%;
+  text-align: center;
+}
+
+.header__search {
+  padding: 25px;
+  min-width: 40%;
+
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header__search::placeholder {
+  font-family: "Open Sans";
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
+.header__search:hover {
+  outline: 1px solid var(--clr-blue);
+}
+
+/* ------------------------------------------------------ */
+/* -- CARDS -- */
+
+.cards__section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.cards__section h3 {
+  margin: 50px 0 20px;
+}
+
+.cards {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+  margin-top: 20px;
+}
+
+.card {
+  width: 350px;
+  height: 275px;
+
+  border: 1px solid var(--clr-black);
+  margin: 10px auto;
+
+  cursor: pointer;
+  position: relative;
+
+  transition: all 250ms ease;
+}
+
+.card:hover {
+  box-shadow: 1px 1px 5px var(--clr-grey);
+}
+
+.card__image {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.card__image img {
+  max-width: 100%;
+}
+
+.card__info {
+  width: 100%;
+  height: 45%;
+
+  background-color: var(--clr-white);
+
+  padding: 5px 10px;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.card__info h4 {
+  font-family: "Open Sans";
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
+.card__info p {
+  font-family: "Open Sans";
+  font-size: 0.90em;
+  margin-top: 5px;
+}
+
+/* ------------------------------------------------------ */
+/* -- HOMES -- */
+
+.painting {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.painting__details {
+  display: grid;
+  /* grid-template-columns: repeat(2, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+  align-items: center;
+
+  width: 80%;
+  height: 70%;
+  margin: 0 auto;
+  padding: 20px;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+
+  background: var(--clr-white);
+}
+
+.painting__image {
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.painting__image img {
+  max-width: 100%;
+}
+
+.painting__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  width: 30px;
+  height: 30px;
+
+  background: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+.painting__close img {
+  width: 25px;
+  height: 25px;
+}
+
+.painting__overview {
+  height: 100%;
+  margin: 0 20px;
+  padding-right: 40px;
+
+  overflow-y: scroll;
+}
+
+.painting__overview h1,
+.painting__overview h2,
+.painting__overview hr {
+  margin: 10px auto;
+}
+
+.painting__overview ul {
+  margin-left: 40px;
+}
+
+.painting__buy,
+.painting__contact,
+.painting__owned {
+  margin: 20px 5px;
+
+  background-color: var(--clr-blue);
+  color: var(--clr-white);
+
+  border: none;
+  border-radius: 4px;
+
+  font-family: "Open Sans";
+  font-size: 1.10em;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 250ms ease;
+}
+
+.painting__buy {
+  width: 225px;
+  height: 50px;
+}
+
+.painting__buy:hover {
+  background-color: var(--clr-blue-2);
+}
+
+.painting__contact {
+  width: 150px;
+  height: 50px;
+
+  background-color: transparent;
+  color: var(--clr-blue);
+
+  border: 1px solid var(--clr-blue);
+}
+
+.painting__contact:hover {
+  background-color: #f7f7f7;
+  color: var(--clr-blue-2);
+}
+
+.painting__owned {
+  height: 50px;
+  background-color: var(--clr-green);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: default;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav__links {
+    display: none;
+  }
+}
+
+.paintingContainer {
+  width: 100%;
+  background-color: #f0f2f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: scroll;
+}
+
+.paintingWrapper {
+  width: 80%;
+  display: flex;
+}
+
+.paintingRight {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.paintingBox {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 50px 100px;
+  justify-content: space-around;
+  box-shadow: 0px 0px 27px -10px rgba(0,0,0,0.45);
+  -webkit-box-shadow: 0px 0px 27px -10px rgba(0,0,0,0.45);
+  -moz-box-shadow: 0px 0px 27px -10px rgba(0,0,0,0.45);
+}
+.divinput{
+  margin: 15px 0px;
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+.divinput label{
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  color: rgb(117 98 98);
+  text-transform: capitalize;
+  font-size: 18px;
+  transition: top .3s;
+  padding: 0 5px;
+  pointer-events: none;
+}
+.divinput input:focus ~ label, .divinput input:not(:focus):valid ~ label{
+      top:-12px;
+      background-color:white ;
+      font-size: 15px;
+      color: #1775ee;
+      border-radius: 10px;
+}
+    
+.paintingInput {
+  height: 40px;
+  background: transparent;
+  padding-left: 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: 1px solid grey;
+  outline: none;
+  width: 100%;
+}
+.paintingInput:focus {
+  border: 1px solid blue;
+}
+
+.paintingInput1 {
+  height: 40px;
+  background: transparent;
+  padding-left: 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: 1px solid grey;
+  outline: none;
+  width: 50%;
+}
+.paintingInput1:focus {
+  border: 1px solid blue;
+}
+ 
+.paintingButton{
+  align-items: center;
+  background-color: #283290;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  margin: 20px 0px;
+  width: 300px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.paintingButton:disabled{
+  cursor: not-allowed;
+}
+
+
+.paintingButton1{
+  align-items: center;
+  background-color: #283290;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  margin: 20px 0px;
+  width: 150px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.paintingButton1:disabled{
+  cursor: not-allowed;
+}
+
+@media only screen and (max-width: 768px) {
+  .paintingWrapper {
+      width: 100%;
+      display: flex;
+  }
+  .paintingBox {
+      background-color: white;
+      display: flex;
+      margin: unset;
+      padding: 20px 20px;
+      flex-direction: column;
+      justify-content: space-around;
+      box-shadow: unset;
+  }
+  .paintingButton{
+      width: 100%;
+  }
+}
