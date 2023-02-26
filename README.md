@@ -1,4 +1,11 @@
-# Painting NFT DApp
+# ArtifexChain
+
+ArtifexChain is a decentralized application built on Ethereum blockchain that offers a unique NFT marketplace for paintings.The technology stack includes React.js for the frontend framework, Hardhat for development, Ethers.js for blockchain interaction, Solidity for writing smart contracts and tests, and Javascript for React and testing. The integration with Pinata ensures secure and decentralized storage and distribution of media files.
+
+Users can list their paintings for sale by uploading metadata to Pinata, (a media storage and distribution platform on IPFS), and then mint an NFT for the asset. Buyers can then purchase the artwork and make payment through a third-party smart contract called escrow. With approval of both buyer and seller and payment completion , ownership of the NFT is transferred to the buyer.
+
+In conclusion, ArtifexChain offers a unique platform for artists to sell their paintings as NFTs and for buyers to own unique and valuable digital assets.
+
 
 ## Technology Stack & Tools
 - [React.js](https://reactjs.org/) (Frontend Framework)
