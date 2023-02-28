@@ -24,7 +24,7 @@ async function main() {
     
     const [buyer, seller] = await ethers.getSigners()
 
-    // Deploy Real Estate
+    // Deploy PaintingMarketplace
     const PaintingMarketplace = await ethers.getContractFactory('PaintingMarketplace')
     const paintingMarketplace = await PaintingMarketplace.deploy()
     await paintingMarketplace.deployed()

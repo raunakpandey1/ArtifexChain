@@ -16,7 +16,7 @@ const Topbar = ({ account, setAccount }) => {
 
             <div className='nav__brand'>
                 {/* <img src={logo} alt="Logo" /> */}
-                <h1>PaintingMarketplace</h1>
+                <h1>ArtifexChain</h1>
             </div>
 
             {account ? (

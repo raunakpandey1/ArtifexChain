@@ -40,7 +40,7 @@ function App() {
       provider
     );
 
-     
+     console.log(config[network.chainId].paintingMarketPlace.address)
     // setPaintingNFTPlace(paintingMarketplace.connect())
     
     
@@ -100,7 +100,7 @@ function App() {
 
   useEffect(() => {
     loadBlockchainData();
-    retrieveFiles();
+    // retrieveFiles();
   }, []);
 
   const togglePop = (painting) => {
